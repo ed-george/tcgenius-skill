@@ -1,0 +1,38 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "",
+      "was_cloned": false,
+      "merge": {}
+    },
+    "ed": {
+      "skill_id": "amzn1.ask.skill.4524cd63-9428-4d74-818c-8a21b8516e4c",
+      "was_cloned": false,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "55101749e41b5fba67e64cb297a4f099"
+        },
+        "interactionModel": {
+          "en-GB": {
+            "eTag": "8bf8e4479627974aed43961def195503"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:355382267527:function:ask-custom-tcgenius-skill-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-custom-tcgenius-skill-default",
+            "handler": "index.handler",
+            "revisionId": "f48f19c7-aded-4a6e-bafe-d05449f3a51e",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}

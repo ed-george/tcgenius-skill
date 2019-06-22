@@ -1,0 +1,16 @@
+{
+  "name": "tcgenius",
+  "version": "0.0.1",
+  "description": "A Pokémon Trading Card companion for Alexa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ed George",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "ask-sdk-core": "^2.0.0",
+    "ask-sdk-model": "^1.0.0",
+    "node-fetch": "*"
+  }
+}

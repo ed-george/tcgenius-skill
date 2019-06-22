@@ -1,0 +1,219 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [
+        {
+            "description": "Colors dark to light",
+            "colors": {
+                "myBackground": "#032E49",
+                "myColorPrimaryDark": "#043E62",
+                "myColorPrimary": "#0874b9",
+                "myColorAccent": "#66b5e8",
+                "myWhite": "#FFFFFF"
+            }
+        }
+    ],
+    "styles": {},
+    "layouts": {
+        "HomePageButton": {
+            "parameters": [
+                "title",
+                "colorPrimary",
+                "colorSecondary"
+            ],
+            "items": [
+                {
+                    "type": "TouchWrapper",
+                    "width": "40vw",
+                    "height": "20vh",
+                    "item": {
+                        "type": "Container",
+                        "width": "40vw",
+                        "height": "20vh",
+                        "items": [
+                            {
+                                "type": "Frame",
+                                "width": "40vw",
+                                "height": "20vh",
+                                "backgroundColor": "${colorSecondary}",
+                                "position": "absolute"
+                            },
+                            {
+                                "type": "Frame",
+                                "width": "39vw",
+                                "height": "18vh",
+                                "backgroundColor": "${colorPrimary}",
+                                "position": "absolute"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "${title}",
+                                "color": "@myWhite",
+                                "fontWeight": "900",
+                                "fontSize": "6vw",
+                                "width": "39vw",
+                                "height": "18vh",
+                                "textAlign": "center",
+                                "textAlignVertical": "center"
+                            }
+                        ]
+                    },
+                    "onPress": {
+                        "type": "SendEvent",
+                        "arguments": [
+                            "${title}"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "Frame",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "backgroundColor": "@myBackground",
+                        "position": "absolute"
+                    },
+                    {
+                        "when": "${viewport.shape == 'round'}",
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "text": "TCGenius",
+                                "color": "@myWhite",
+                                "fontWeight": "900",    
+                                "width": "100vw",
+                                "fontSize": "8vh",
+                                "paddingTop": "10vh",
+                                "textAlign": "center"
+                            },
+                            {
+                                "type": "HomePageButton",
+                                "title": "Trainer",
+                                "colorPrimary": "@myColorPrimary",
+                                "colorSecondary": "@myColorPrimaryDark",
+                                "position": "absolute",
+                                "top": "24vh",
+                                "left": "30vw"
+                            },
+                            {
+                                "type": "HomePageButton",
+                                "title": "Energy",
+                                "colorPrimary": "@myColorPrimary",
+                                "colorSecondary": "@myColorPrimaryDark",
+                                "position": "absolute",
+                                "top": "47vh",
+                                "left": "30vw"
+                            },
+                            {
+                                "type": "HomePageButton",
+                                "title": "Pokemon",
+                                "colorPrimary": "@myColorPrimary",
+                                "colorSecondary": "@myColorPrimaryDark",
+                                "position": "absolute",
+                                "top": "70vh",
+                                "left": "30vw"
+                            }
+                        ]
+                    },
+                    {
+                        "when": "${viewport.shape != 'round'}",
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "direction": "row",
+                        "items": [
+                            {
+                                "type": "Container",
+                        "width": "50vw",
+                        "height": "100vh",
+                        "direction": "column",
+                        "items" :[
+                            {
+                                "type": "Text",
+                                "text": "TCGenius",
+                                "color": "@myWhite",
+                                "fontWeight": "900",    
+                                "width": "100vh",
+                                "height": "15vh",
+                                "fontSize": "13vh",
+                                "paddingLeft": "5vw",
+                                "textAlignVertical": "center"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "For all your Pokémon Trading Card needs",
+                                "color": "@myWhite",
+                                "width": "100vh",
+                                "fontSize": "8vh",
+                                "paddingLeft": "5vw",
+                                "textAlignVertical": "center"
+                            },
+                        
+                            {
+                                "type": "Text",
+                                "text": "Pick a card type to continue or say 'Find me a (card type)'",
+                                "color": "@myWhite",
+                                "width": "100vw",
+                                "height": "50vh",
+                                "fontSize": "6vh",
+                                "paddingLeft": "5vw",
+                                "textAlignVertical": "center"
+                            }
+                            ]
+                            },
+                            
+                            {
+                                "type": "Container",    
+                                "width": "50vw",
+                                "height": "100vh",
+                                "items": [
+                                    {
+                                        "type": "HomePageButton",
+                                        "title": "Trainer",
+                                        "colorPrimary": "@myColorPrimary",
+                                        "colorSecondary": "@myColorPrimaryDark",
+                                        "position": "absolute",
+                                        "top": "10vh"
+                                    },
+                                    {
+                                        "type": "HomePageButton",
+                                        "title": "Energy",
+                                        "colorPrimary": "@myColorPrimary",
+                                        "colorSecondary": "@myColorPrimaryDark",
+                                        "position": "absolute",
+                                        "top": "40vh"
+                                    },
+                                    {
+                                        "type": "HomePageButton",
+                                        "title": "Pokemon",
+                                        "colorPrimary": "@myColorPrimary",
+                                        "colorSecondary": "@myColorPrimaryDark",
+                                        "position": "absolute",
+                                        "top": "70vh"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

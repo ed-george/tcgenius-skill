@@ -1,0 +1,128 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "tcgenius",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "CardRequestIntent",
+                  "slots": [
+                      {
+                          "name": "card_type",
+                          "type": "CARD_TYPE",
+                          "samples": [
+                              "An {card_type}",
+                              "A {card_type} card",
+                              "{card_type}"
+                          ]
+                      }
+                  ],
+                  "samples": [
+                      "Get {card_type} cards",
+                      "Get a {card_type} card",
+                      "Find an {card_type} card",
+                      "Find a {card_type}",
+                      "Find a {card_type} card",
+                      "Find me a {card_type} card",
+                      "Find me a card"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "CARD_TYPE",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "tool"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "item"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "supporter"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "energy",
+                              "synonyms": [
+                                  "energies"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "pokemon",
+                              "synonyms": [
+                                  "monster",
+                                  "pokémon"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "trainer"
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "dialog": {
+          "intents": [
+              {
+                  "name": "CardRequestIntent",
+                  "confirmationRequired": false,
+                  "prompts": {},
+                  "slots": [
+                      {
+                          "name": "card_type",
+                          "type": "CARD_TYPE",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.1328009192697.1329070448791"
+                          }
+                      }
+                  ]
+              }
+          ],
+          "delegationStrategy": "ALWAYS"
+      },
+      "prompts": [
+          {
+              "id": "Elicit.Slot.1328009192697.1329070448791",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "What type of card?"
+                  },
+                  {
+                      "type": "PlainText",
+                      "value": "What type of card would you like?"
+                  }
+              ]
+          }
+      ]
+  }
+}
