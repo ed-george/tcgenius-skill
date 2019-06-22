@@ -21,14 +21,14 @@ module.exports = {
     /**
      * Datasource for the Home Screen
      */
-    getHome: function (handlerInput) {
+    getHomeData: function (handlerInput) {
         return {};
     },
 
     /**
      * Datasource for the Results Screen
      */
-    getResults: function (handlerInput, type, cards) {
+    getResultsData: function (handlerInput, type, cards) {
         return {
             "cardData": {
                 "type": `${type}`,
